@@ -1,0 +1,15 @@
+1. cd clone-api
+virtualenv venv
+
+2. source venv/bin/activate
+
+3. pip install -r requirements.txt
+
+4. python clone-api.py
+
+5. to create new session_id & token :
+    http://127.0.0.1:5000/session/create
+
+6. to create only new token from an session_id
+    call: /token/create?session_id=<Your_session_id>
+    http://127.0.0.1:5000/token/create?session_id=1_MX40NTgzNzUxMn5-MTQ5NDA5NzQyMjA3MX4rQU9GT0EwTjEyR1lFM1JlbTFqc25PZGl-fg
