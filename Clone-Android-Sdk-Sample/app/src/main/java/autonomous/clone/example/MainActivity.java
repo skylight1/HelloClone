@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity
         Publisher.PublisherListener,
         Subscriber.VideoListener {
 
-    private static final String TAG = "hello-world " + MainActivity.class.getSimpleName();
+    private static final String TAG = "tablet-app " + MainActivity.class.getSimpleName();
 
     private static final int RC_SETTINGS_SCREEN_PERM = 123;
     private static final int RC_VIDEO_APP_PERM = 124;

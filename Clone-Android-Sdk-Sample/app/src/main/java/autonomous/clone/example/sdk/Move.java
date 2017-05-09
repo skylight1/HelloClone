@@ -10,7 +10,7 @@ import com.google.firebase.database.DatabaseReference;
 
 public class Move {
 
-    public static void excute(DatabaseReference mDatabase, String Product_id, String value){
+    public static void execute(DatabaseReference mDatabase, String Product_id, String value){
 
         String package_data = "{\"source\":\"WebApp\",\"type\":\"clone_control\",\"data\":\"{\\\"action\\\":\\\"MOVE\\\",\\\"name\\\":\\\"" + value + "\\\"}\"}";
         if(mDatabase!=null){

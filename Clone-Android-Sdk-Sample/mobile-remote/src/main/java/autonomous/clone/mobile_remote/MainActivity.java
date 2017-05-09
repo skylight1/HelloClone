@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity
         Publisher.PublisherListener,
         Subscriber.VideoListener {
 
-    private static final String TAG = "hello-world " + MainActivity.class.getSimpleName();
+    private static final String TAG = "mobile-remote " + MainActivity.class.getSimpleName();
 
     private static final int RC_SETTINGS_SCREEN_PERM = 123;
     private static final int RC_VIDEO_APP_PERM = 124;
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity
                     if (new_command.compareTo(Config.STOP) != 0) {
                         //String package_data = "{\"source\":\"WebApp\",\"type\":\"clone_control\",\"data\":\"{\\\"action\\\":\\\"MOVE\\\",\\\"name\\\":\\\"" + new_command + "\\\"}\"}";
                         //mDatabase.child(Config.PRODUCT_ID).push().setValue(package_data);
-                        Move.excute(mDatabase, Config.PRODUCT_ID, new_command);
+                        Move.execute(mDatabase, Config.PRODUCT_ID, new_command);
                     } else {
                         if(currentActionView != null){
                             currentActionView.setChecked(false);
@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity
                         //String package_data = "{\"source\":\"WebApp\",\"type\":\"clone_control\",\"data\":\"{\\\"action\\\":\\\"MOVE\\\",\\\"name\\\":\\\"STOP\\\"}\"}";
                         //mDatabase.child(Config.PRODUCT_ID).push().setValue(package_data);
 
-                        Move.excute(mDatabase, Config.PRODUCT_ID, Config.STOP);
+                        Move.execute(mDatabase, Config.PRODUCT_ID, Config.STOP);
                     }
                 }
             }
