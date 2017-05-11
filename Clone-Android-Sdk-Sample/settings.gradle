@@ -1,1 +1,1 @@
-include ':app', ':mobile-remote'
+include ':HelloCloneApp', ':RemoteControlApp'
