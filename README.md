@@ -9,3 +9,4 @@ The Clone SDK lets developers:
 * instruct Clone to move at a given speed, direction, and amount of time
 * read Clone's internal sensors including velocity, battery level, bumper, and IMU
 * see and hear what Clone sees & hears
+![ScreenShot](https://github.com/duyhtq/HelloClone/blob/master/diagram.jpg)
