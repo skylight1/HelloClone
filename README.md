@@ -9,5 +9,3 @@ The Clone SDK lets developers:
 * instruct Clone to move at a given speed, direction, and amount of time
 * read Clone's internal sensors including velocity, battery level, bumper, and IMU
 * see and hear what Clone sees & hears
-
-https://autonomous.quip.com/-/blob/DHHAAAmK8m3/5Gu2LQ-H8dJ9k4e8Lq9phQ
