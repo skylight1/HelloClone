@@ -10,4 +10,4 @@ The Clone SDK lets developers:
 * read Clone's internal sensors including velocity, battery level, bumper, and IMU
 * see and hear what Clone sees & hears
 
-[Image: https://autonomous.quip.com/-/blob/DHHAAAmK8m3/5Gu2LQ-H8dJ9k4e8Lq9phQ]
+https://autonomous.quip.com/-/blob/DHHAAAmK8m3/5Gu2LQ-H8dJ9k4e8Lq9phQ
