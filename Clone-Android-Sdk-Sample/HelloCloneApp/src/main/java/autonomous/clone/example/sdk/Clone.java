@@ -1,4 +1,4 @@
-package autonomous.clone;
+package autonomous.clone.example.sdk;
 
 import android.graphics.Bitmap;
 import android.util.Log;

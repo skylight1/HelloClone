@@ -1,4 +1,4 @@
-package autonomous.clone;
+package autonomous.clone.example.sdk;
 
 /**
  * Created by binhpro on 5/4/17.

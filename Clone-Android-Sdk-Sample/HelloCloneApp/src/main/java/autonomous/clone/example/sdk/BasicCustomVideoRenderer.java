@@ -1,13 +1,24 @@
-package autonomous.clone;
+package autonomous.clone.example.sdk;
+
+/**
+ * Created by binhpro on 5/11/17.
+ */
+
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.opengl.Matrix;
+import android.os.Environment;
+import android.util.Log;
 import android.view.View;
 
 import com.opentok.android.BaseVideoRenderer;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
@@ -17,12 +28,17 @@ import java.util.concurrent.locks.ReentrantLock;
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-public class CustomVideoRenderer extends BaseVideoRenderer {
+public class BasicCustomVideoRenderer extends BaseVideoRenderer{
 
-    private Context mContext;
+    private final static String LOG_TAG = "custom-videorenderer";
 
-    private GLSurfaceView mView;
-    private MyRenderer mRenderer;
+    Context mContext;
+
+    GLSurfaceView mView;
+
+    MyRenderer mRenderer;
+
+    boolean mSaveScreenshot;
 
     static class MyRenderer implements GLSurfaceView.Renderer {
 
@@ -40,18 +56,18 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
         static final int COORDS_PER_VERTEX = 3;
         static final int TEXTURECOORDS_PER_VERTEX = 2;
 
-        static float mXYZCoords[] = {-1.0f, 1.0f, 0.0f, // top left
+        static float mXYZCoords[] = { -1.0f, 1.0f, 0.0f, // top left
                 -1.0f, -1.0f, 0.0f, // bottom left
                 1.0f, -1.0f, 0.0f, // bottom right
                 1.0f, 1.0f, 0.0f // top right
         };
 
-        static float mUVCoords[] = {0, 0, // top left
+        static float mUVCoords[] = { 0, 0, // top left
                 0, 1, // bottom left
                 1, 1, // bottom right
-                1, 0}; // top right
+                1, 0 }; // top right
 
-        private short mVertexIndex[] = {0, 1, 2, 0, 2, 3}; // order to draw
+        private short mVertexIndex[] = { 0, 1, 2, 0, 2, 3 }; // order to draw
         // vertices
 
         private final String vertexShaderCode = "uniform mat4 uMVPMatrix;"
@@ -74,8 +90,8 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
                 + "  u=texture2D(Utex,vec2(nx,ny)).r;\n"
                 + "  v=texture2D(Vtex,vec2(nx,ny)).r;\n"
 
-                + "  y=1.0-1.1643*(y-0.0625);\n" // Invert effect
-                // + "  y=1.1643*(y-0.0625);\n" // Normal renderer
+                //+ "  y=1.0-1.1643*(y-0.0625);\n" // Invert effect
+                + "  y=1.1643*(y-0.0625);\n" // Normal renderer
 
                 + "  u=u-0.5;\n" + "  v=v-0.5;\n" + "  r=y+1.5958*v;\n"
                 + "  g=y-0.39173*u-0.81290*v;\n" + "  b=y+2.017*u;\n"
@@ -89,8 +105,12 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
         private int mTextureHeight;
         private int mViewportWidth;
         private int mViewportHeight;
+        private BasicCustomVideoRenderer mCustomVideoRenderer;
 
-        public MyRenderer() {
+        public MyRenderer(BasicCustomVideoRenderer parent) {
+
+            this.mCustomVideoRenderer = parent;
+
             ByteBuffer bb = ByteBuffer.allocateDirect(mXYZCoords.length * 4);
             bb.order(ByteOrder.nativeOrder());
             mVertexBuffer = bb.asFloatBuffer();
@@ -112,8 +132,7 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
 
         @Override
         public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-            gl.glClearColor(0, 0, 0, 1);
-            GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+            GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 
             int vertexShader = loadShader(GLES20.GL_VERTEX_SHADER,
                     vertexShaderCode);
@@ -185,7 +204,7 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
             int w = frame.getWidth();
             int h = frame.getHeight();
             int hw = (w + 1) >> 1;
-            int hh = (h + 1) >> 1;
+            int hh = (h +1) >> 1;
 
             initializeTexture(GLES20.GL_TEXTURE0, mTextureIds[0], w, h);
             initializeTexture(GLES20.GL_TEXTURE1, mTextureIds[1], hw, hh);
@@ -199,7 +218,7 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
             int width = frame.getWidth();
             int height = frame.getHeight();
             int half_width = (width + 1) >> 1;
-            int half_height = (height + 1) >> 1;
+            int half_height = (height +1) >> 1;
             int y_size = width * height;
             int uv_size = half_width * half_height;
 
@@ -210,10 +229,6 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
 
             if (bb.remaining() == y_size + uv_size * 2) {
                 bb.position(0);
-
-                GLES20.glPixelStorei(GLES20.GL_UNPACK_ALIGNMENT, 1);
-                GLES20.glPixelStorei(GLES20.GL_PACK_ALIGNMENT, 1);
-
                 GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
                 GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mTextureIds[0]);
                 GLES20.glTexSubImage2D(GLES20.GL_TEXTURE_2D, 0, 0, 0, width,
@@ -249,6 +264,8 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
 
         @Override
         public void onDrawFrame(GL10 gl) {
+            GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
+
             mFrameLock.lock();
             if (mCurrentFrame != null && !mVideoDisabled) {
                 GLES20.glUseProgram(mProgram);
@@ -290,12 +307,9 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
 
                 GLES20.glDrawElements(GLES20.GL_TRIANGLES, mVertexIndex.length,
                         GLES20.GL_UNSIGNED_SHORT, mDrawListBuffer);
-            } else {
-                //black frame when video is disabled
-                gl.glClearColor(0, 0, 0, 1);
-                GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
             }
             mFrameLock.unlock();
+
         }
 
         public void displayFrame(Frame frame) {
@@ -305,7 +319,87 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
             }
             this.mCurrentFrame = frame;
             mFrameLock.unlock();
+
+            if(mCustomVideoRenderer.mSaveScreenshot) {
+                Log.d(LOG_TAG, "Screenshot capture");
+
+                ByteBuffer bb = frame.getBuffer();
+                bb.clear();
+
+                int width = frame.getWidth();
+                int height = frame.getHeight();
+                int half_width = (width + 1) >> 1;
+                int half_height = (height +1) >> 1;
+                int y_size = width * height;
+                int uv_size = half_width * half_height;
+
+                byte []yuv = new byte[y_size + uv_size * 2];
+                bb.get(yuv);
+                int[] intArray = new int[width*height];
+
+                // Decode Yuv data to integer array
+                decodeYUV420(intArray, yuv, width, height);
+
+                // Initialize the bitmap, with the replaced color
+                Bitmap bmp = Bitmap.createBitmap(intArray, width, height, Bitmap.Config.ARGB_8888);
+
+                try {
+                    String path = Environment.getExternalStorageDirectory().toString();
+                    OutputStream fOutputStream = null;
+                    File file = new File(path, "clone-capture-"+ System.currentTimeMillis() +".png");
+                    fOutputStream = new FileOutputStream(file);
+
+                    bmp.compress(Bitmap.CompressFormat.PNG, 100, fOutputStream);
+
+                    fOutputStream.flush();
+                    fOutputStream.close();
+
+                } catch (Exception e) {
+                    e.printStackTrace();
+                    return;
+                }
+
+                mCustomVideoRenderer.mSaveScreenshot = false;
+            }
         }
+
+
+        static public void decodeYUV420(int[] rgba, byte[] yuv420, int width, int height) {
+            int half_width = (width + 1) >> 1;
+            int half_height = (height +1) >> 1;
+            int y_size = width * height;
+            int uv_size = half_width * half_height;
+
+            for (int j = 0; j < height; j++) {
+                for (int i = 0; i < width; i++) {
+
+                    double y = (yuv420[j * width + i]) & 0xff;
+                    double v = (yuv420[y_size + (j >> 1) * half_width + (i>>1)]) & 0xff;
+                    double u = (yuv420[y_size + uv_size + (j >> 1) * half_width + (i>>1)]) & 0xff;
+
+                    double r;
+                    double g;
+                    double b;
+
+                    r = y + 1.402 * (u-128);
+                    g = y - 0.34414*(v-128) - 0.71414*(u-128);
+                    b = y + 1.772*(v-128);
+
+                    if (r < 0) r = 0;
+                    else if (r > 255) r = 255;
+                    if (g < 0) g = 0;
+                    else if (g > 255) g = 255;
+                    if (b < 0) b = 0;
+                    else if (b > 255) b = 255;
+
+                    int ir = (int)r;
+                    int ig = (int)g;
+                    int ib = (int)b;
+                    rgba[j * width + i] = 0xff000000 | (ir << 16) | (ig << 8) | ib;
+                }
+            }
+        }
+
 
         public static int loadShader(int type, String shaderCode) {
             int shader = GLES20.glCreateShader(type);
@@ -334,15 +428,15 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
         public void enableVideoFit(boolean enableVideoFit) {
             mVideoFitEnabled = enableVideoFit;
         }
-    }
+    };
 
-    public CustomVideoRenderer(Context context) {
+    public BasicCustomVideoRenderer(Context context) {
         this.mContext = context;
 
         mView = new GLSurfaceView(context);
         mView.setEGLContextClientVersion(2);
 
-        mRenderer = new MyRenderer();
+        mRenderer = new MyRenderer(this);
         mView.setRenderer(mRenderer);
 
         mView.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
@@ -383,6 +477,10 @@ public class CustomVideoRenderer extends BaseVideoRenderer {
     @Override
     public void onResume() {
         mView.onResume();
+    }
+
+    public void saveScreenshot(Boolean enableScreenshot){
+        mSaveScreenshot = enableScreenshot;
     }
 
 }
