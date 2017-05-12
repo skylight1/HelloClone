@@ -16,18 +16,10 @@ sdfsad
 
 ::
   // MainActivity.java
-// Catch the button press action
+  // Catch the button press action
 
-final ImageView button = (ImageView) findViewById(R.id.btnCapture);
+  final ImageView button = (ImageView) findViewById(R.id.btnCapture);
 
-button.setOnClickListener(new View.OnClickListener() {
-    public void onClick(View v) {
-        if (mSubscriber == null) {
-            return;
-        }
-        ((BasicCustomVideoRenderer) mSubscriber.getRenderer()).saveScreenshot(true);
-        Toast.makeText(MainActivity.this, "Screenshot saved.", Toast.LENGTH_LONG).show();
-    }
-});
-asfsadf
+
+
 Hello world
