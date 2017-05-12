@@ -3,8 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Clone-Android-Sdk-Sample.iml" filepath="$PROJECT_DIR$/Clone-Android-Sdk-Sample.iml" />
-      <module fileurl="file://$PROJECT_DIR$/HelloCloneApp/HelloCloneApp.iml" filepath="$PROJECT_DIR$/HelloCloneApp/HelloCloneApp.iml" />
-      <module fileurl="file://$PROJECT_DIR$/RemoteControlApp/RemoteControlApp.iml" filepath="$PROJECT_DIR$/RemoteControlApp/RemoteControlApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PhoneApp/PhoneApp.iml" filepath="$PROJECT_DIR$/PhoneApp/PhoneApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RobotApp/RobotApp.iml" filepath="$PROJECT_DIR$/RobotApp/RobotApp.iml" />
     </modules>
   </component>
 </project>

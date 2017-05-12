@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/binhpro/.android/build-cache/a5e2dffcc9a7273d145dc4e1e94a85359cb28d76/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/binhpro/.android/build-cache/a5e2dffcc9a7273d145dc4e1e94a85359cb28d76/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/binhpro/.android/build-cache/a5e2dffcc9a7273d145dc4e1e94a85359cb28d76/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/binhpro/.android/build-cache/a5e2dffcc9a7273d145dc4e1e94a85359cb28d76/output/res/drawable-v21/notification_action_background.xml"
+    }
+]

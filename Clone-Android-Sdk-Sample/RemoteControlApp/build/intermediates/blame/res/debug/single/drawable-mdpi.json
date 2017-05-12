@@ -1,0 +1,134 @@
+[
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/button_mic_off.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/button_mic_off.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_moving_bottom.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_moving_bottom.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_robot_default.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_robot_default.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_connecting.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_connecting.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_user_default.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_user_default.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_logo.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_logo.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_icon_wifi.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_icon_wifi.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_password.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_password.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/autonomous_logo.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/generated/res/pngs/debug/drawable-mdpi/autonomous_logo.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_add.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_add.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/button_mic_on.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/button_mic_on.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_moving_left.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_moving_left.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_moving_top.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_moving_top.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_moving_top_checked.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_moving_top_checked.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_email.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_email.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/button_camera.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/button_camera.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/button_speaker.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/button_speaker.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/button_speaker_off.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/button_speaker_off.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/button_camera_swap.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/button_camera_swap.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_robot.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_robot.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_sucessful.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_sucessful.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_moving_bottom_checked.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_moving_bottom_checked.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_elipse_layout.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_elipse_layout.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_connecting1.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_connecting1.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_moving_right.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_moving_right.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_finger.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_finger.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_fullname.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_fullname.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_connecting2.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_connecting2.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/draw_vector_logo.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/generated/res/pngs/debug/drawable-mdpi/draw_vector_logo.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_moving_left_checked.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_moving_left_checked.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_call_end_24dp.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/generated/res/pngs/debug/drawable-mdpi/ic_call_end_24dp.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_moving_right_checked.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_moving_right_checked.png"
+    },
+    {
+        "merged": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/build/intermediates/res/merged/debug/drawable-mdpi/ic_taphere.png",
+        "source": "/Volumes/Data/autonomous/autonomous-clone-sdk-sample/Clone-Android-Sdk-Sample/RemoteControlApp/src/main/res/drawable-mdpi/ic_taphere.png"
+    }
+]

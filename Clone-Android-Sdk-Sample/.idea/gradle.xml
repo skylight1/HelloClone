@@ -8,8 +8,8 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/HelloCloneApp" />
-            <option value="$PROJECT_DIR$/RemoteControlApp" />
+            <option value="$PROJECT_DIR$/PhoneApp" />
+            <option value="$PROJECT_DIR$/RobotApp" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
