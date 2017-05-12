@@ -1,2 +1,0 @@
-Flask
-opentok>=2.4.1
