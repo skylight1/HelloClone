@@ -326,10 +326,7 @@ public class BasicCustomVideoRenderer extends BaseVideoRenderer{
             mFrameLock.unlock();
             
             // @TODO: 5/12/17  duy
-            
 
-            
-            
 
 
             if(mCustomVideoRenderer.mSaveScreenshot) {
@@ -356,7 +353,7 @@ public class BasicCustomVideoRenderer extends BaseVideoRenderer{
                 // Initialize the bitmap, with the replaced color
                 Bitmap bmp = Bitmap.createBitmap(intArray, width, height, Bitmap.Config.ARGB_8888);
 
-                clone.stop();
+                // @TODO
 
                 try {
                     String path = Environment.getExternalStorageDirectory().toString();
