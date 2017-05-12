@@ -4,7 +4,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "autonomous.clone.example"
+        applicationId "autonomous.example"
         minSdkVersion 16
         targetSdkVersion 25
         versionCode 1
@@ -33,6 +33,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.mcxiaoke.volley:library-aar:1.0.1'
     testCompile 'junit:junit:4.12'
+    compile project(path: ':RemoteControlApp')
 }
 
 apply plugin: 'com.google.gms.google-services'

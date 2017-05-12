@@ -1,4 +1,4 @@
-package autonomous.clone.example.sdk;
+package autonomous.clone;
 import java.util.Date;
 
 /**

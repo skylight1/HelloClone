@@ -1,13 +1,11 @@
-package autonomous.clone.example;
+package autonomous.example;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.Manifest;
 import android.opengl.GLSurfaceView;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -36,9 +34,9 @@ import org.json.JSONObject;
 
 import java.util.List;
 
-import autonomous.clone.example.sdk.Clone;
-import autonomous.clone.example.sdk.Config;
-import autonomous.clone.example.sdk.VideoSession;
+import autonomous.clone.Clone;
+import autonomous.clone.Config;
+import autonomous.clone.VideoSession;
 import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
