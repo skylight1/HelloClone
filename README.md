@@ -125,7 +125,7 @@ button.setOnClickListener(new View.OnClickListener() {
 ```
 
 
-**Example 2: ** Drive Clone around with your phone
+**Example 2:** Drive Clone around with your phone
 
 ```
 // MainActivity.java
@@ -166,7 +166,7 @@ private final CompoundButton.OnCheckedChangeListener onChangeDirection = new Com
 ```
 
 
-**Example 3:  **Write your own algorithm to analyze what Clone sees and instruct Clone to move accordingly
+**Example 3:** Write your own algorithm to analyze what Clone sees and instruct Clone to move accordingly
 
 ```
 // BasicCustomVideoRender.java
