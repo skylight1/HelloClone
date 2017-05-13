@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity
         mDatabase = FirebaseDatabase.getInstance().getReference();
         requestPermissions();
 
-        clone = new Clone(Config.PRODUCT_ID);
+        clone = new Clone(Config.ROBOT_ID);
         videoSession = new VideoSession();
 
 
@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity
     private void initSession(){
 
 
-        mDatabase.child("sessions/"+Config.PRODUCT_ID).addListenerForSingleValueEvent(new ValueEventListener() {
+        mDatabase.child("sessions/"+Config.ROBOT_ID).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 videoSession = dataSnapshot.getValue(VideoSession.class);

@@ -5,9 +5,10 @@ package autonomous.sdk;
  */
 
 public class Config {
+    //Clone-Base ROBOT_ID
+    public static String ROBOT_ID ="FC5504045BB24C36972723BADFAF93B7";
     //HOST API
     public static String HOST = "http://54.208.60.183";
-
     // FireBase  User//
     public static  String FBASE_EMAIL = "clone-sample@autonomous.nyc";
     public static  String FBASE_PASSWORD = "012345";
@@ -23,8 +24,6 @@ public class Config {
     // Opentok Video App_KEY
     public static String API_KEY ="45837512";
 
-    //Clone-Base ProductID
-    public static String PRODUCT_ID ="FC5504045BB24C36972723BADFAF93B7";
     //To create new Session & Token, Please launch clone-api flask app.
     // call api /session/create
     public static String SESSION_ID ="1_MX40NTgzNzUxMn5-MTQ5NDA5NzQyMjA3MX4rQU9GT0EwTjEyR1lFM1JlbTFqc25PZGl-fg";
