@@ -16,9 +16,8 @@ The Clone SDK lets developers:
 
 
 ![ScreenShot](https://github.com/duyhtq/HelloClone/blob/master/diagram.jpg)
-sdfsad
 
-# Build your first Clone app
+## Build your first Clone app
 
 Import **HelloClone** project into Android Studio.
 
@@ -26,3 +25,18 @@ Import **HelloClone** project into Android Studio.
 /HelloClone/RobotApp/
 /HelloClone/PhoneApp/
 ```
+
+Update Config.java with the your ROBOT ID.
+
+```
+public static String ROBOT_ID ="YOUR_ROBOT_ID";
+```
+
+Install the **RobotApp** on the Android tablet on Clone.  
+
+Install **PhoneApp** on your Android phone.
+
+That's it.  You now can use your phone to remotely control Clone to move around, capture photos, or record videos.
+
+## Clone SDK
+
