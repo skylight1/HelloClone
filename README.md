@@ -2,7 +2,7 @@
 
 ## What is Clone?
 
-Clone (https://www.autonomous.ai/clone-telepresence-smart-office-robot) is an Android-based robot designed by Autonomous.  It is a 4-foot tall robot, capable of moving around, running Android apps, and being controlled by a smartphone.
+[Clone Robot](https://www.autonomous.ai/clone-telepresence-smart-office-robot) is an Android-based robot designed by [Autonomous]((https://www.autonomous.ai).  It is a 4-foot tall robot, capable of moving around, running Android apps, and being controlled by a smartphone.
 
 
 ## Develop Apps for Clone
