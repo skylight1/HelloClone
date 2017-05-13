@@ -14,12 +14,12 @@ The Clone SDK lets developers:
 ![ScreenShot](https://github.com/duyhtq/HelloClone/blob/master/diagram.jpg)
 sdfsad
 
-::
+```
   // MainActivity.java
   // Catch the button press action
 
   final ImageView button = (ImageView) findViewById(R.id.btnCapture);
-
+```
 
 
 Hello world
