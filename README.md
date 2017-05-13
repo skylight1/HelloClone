@@ -100,7 +100,48 @@ clone.stopRecording();
 
 ## App Ideas & Examples
 
-**Example 1:**  Tell Clone to take a picture and send it back to your phone
+**Example 1:** Build your own Telepresence Robot!
+
+```
+// MainActivity.java
+
+// Catch the button press action
+
+private final CompoundButton.OnCheckedChangeListener onChangeDirection = new CompoundButton.OnCheckedChangeListener() {
+        @Override
+        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+            if (isChecked) {
+                String new_command = "";
+                switch (buttonView.getId()) {
+                    case R.id.btn_top:
+                        clone.moveForward();
+                        break;
+                    case R.id.btn_bottom:
+                        clone.moveBackward();
+                        break;
+                    case R.id.btn_left:
+                        clone.turnLeft();
+                        break;
+                    case R.id.btn_right: 
+                        clone.turnRight();
+                        break;
+                    case R.id.btn_stop_action:
+                        if(currentActionView != null){
+                            currentActionView.setChecked(false);
+                        }
+                        clone.stop();
+                        break;
+                }
+                if(currentActionView !=null){
+                    currentActionView.setChecked(false);
+                }
+                currentActionView = buttonView;
+            }
+        }
+    };
+    
+```
+**Example 2:**  Take a screenshot from thousands of miles away :)
 
 ```
 // MainActivity.java
@@ -138,49 +179,7 @@ Bitmap bmp = Bitmap.createBitmap(intArray, width, height, Bitmap.Config.ARGB_888
 
 ```
 
-
-**Example 2:** Drive Clone around with your phone
-
-```
-// MainActivity.java
-// Catch the button press action
-
-private final CompoundButton.OnCheckedChangeListener onChangeDirection = new CompoundButton.OnCheckedChangeListener() {
-        @Override
-        public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-            if (isChecked) {
-                String new_command = "";
-                switch (buttonView.getId()) {
-                    case R.id.btn_top:
-                        clone.moveForward();
-                        break;
-                    case R.id.btn_bottom:
-                        clone.moveBackward();
-                        break;
-                    case R.id.btn_left:
-                        clone.turnLeft();
-                        break;
-                    case R.id.btn_right: 
-                        clone.turnRight();
-                        break;
-                    case R.id.btn_stop_action:
-                        if(currentActionView != null){
-                            currentActionView.setChecked(false);
-                        }
-                        clone.stop();
-                        break;
-                }
-                if(currentActionView !=null){
-                    currentActionView.setChecked(false);
-                }
-                currentActionView = buttonView;
-            }
-        }
-    };
-```
-
-
-**Example 3:** Write your own algorithm to analyze what Clone sees, frame by frame, and instruct Clone to move accordingly
+**Example 3:** Write your own algorithm to analyze what Clone sees, frame by frame, and instruct Clone to move accordingly.  For example, autonomous navigation app, office security app, etc.
 
 ```
 // BasicCustomVideoRender.java
