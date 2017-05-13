@@ -28,7 +28,7 @@ Import **HelloClone** project into Android Studio.
 /HelloClone/PhoneApp/
 ```
 
-Update Config.java with the your ROBOT ID.
+Update Config.java under /autonomous/sdk/ with the your ROBOT ID.
 
 ```
 public static String ROBOT_ID ="YOUR_ROBOT_ID";
