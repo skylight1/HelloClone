@@ -40,3 +40,58 @@ That's it.  You now can use your phone to remotely control Clone to move around,
 
 ## Clone SDK
 
+Create a new Clone object with your ROBOT ID
+
+```
+clone = new Clone(Config.ROBOT_ID);
+```
+
+Drive forward
+
+```
+clone.moveForward();
+```
+
+Drive backward
+
+```
+clone.moveBackward();
+```
+
+Turn right
+
+```
+clone.turnRight();
+```
+
+Turn left
+
+```
+clone.turnLeft();
+```
+
+Stop
+
+```
+clone.stop();
+```
+
+Auto-charge
+
+```
+clone.autocharge();
+```
+
+Start recording a video
+
+```
+clone.startRecording();
+```
+
+Stop recording a video
+
+```
+clone.stopRecording();
+```
+
+
