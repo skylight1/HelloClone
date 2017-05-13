@@ -4,7 +4,7 @@
 
 [Clone Robot](https://www.autonomous.ai/clone-telepresence-smart-office-robot) is an Android-based robot designed by [Autonomous](https://www.autonomous.ai).  It is a 4-foot tall robot, capable of moving around, running Android apps, and being controlled by a smartphone.
 
-Email Duy Huynh at duy@autonomous.ai if you have any questions :)
+Email Duy at duy@autonomous.ai if you have any questions :)
 
 
 ## Develop Apps for Clone
