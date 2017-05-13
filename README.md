@@ -180,10 +180,25 @@ private final CompoundButton.OnCheckedChangeListener onChangeDirection = new Com
 ```
 
 
-**Example 3:** Write your own algorithm to analyze what Clone sees and instruct Clone to move accordingly
+**Example 3:** Write your own algorithm to analyze what Clone sees, frame by frame, and instruct Clone to move accordingly
 
 ```
 // BasicCustomVideoRender.java
+
+public void displayFrame(Frame frame) {
+    mFrameLock.lock();
+    if (this.mCurrentFrame != null) {
+        this.mCurrentFrame.recycle();
+    }
+    this.mCurrentFrame = frame;
+    mFrameLock.unlock();
+            
+
+            
+    // TODO: IMPLEMENT YOUR OWN ALGORITHM HERE TO ANALYZE FRAME BY FRAME
+    // AND TELL THE ROBOT TO PERFORM ANY ACTION 
+
+
 ```
 
 
