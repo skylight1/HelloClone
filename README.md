@@ -104,6 +104,7 @@ clone.stopRecording();
 
 ```
 // MainActivity.java
+
 // Catch the button press action
 
 final ImageView button = (ImageView) findViewById(R.id.btnCapture);
@@ -120,16 +121,21 @@ button.setOnClickListener(new View.OnClickListener() {
 ```
 
 ```
-    // BasicCustomVideoRender.java
-    // Return the image
-    decodeYUV420(intArray, yuv, width, height);
+// BasicCustomVideoRender.java
 
-    Bitmap bmp = Bitmap.createBitmap(intArray, width, height, Bitmap.Config.ARGB_8888);
+// Return the image
+
+decodeYUV420(intArray, yuv, width, height);
+
+Bitmap bmp = Bitmap.createBitmap(intArray, width, height, Bitmap.Config.ARGB_8888);
 
 
 
-     // TODO: IMPLEMENT YOUR OWN ALGORITHM HERE TO ANALYZE THE CURRENT SCREENSHOT
-     // AND TELL THE ROBOT TO PERFORM ANY ACTION
+// TODO: IMPLEMENT YOUR OWN ALGORITHM HERE TO ANALYZE THE CURRENT SCREENSHOT
+// AND TELL THE ROBOT TO PERFORM ANY ACTION
+
+
+
 ```
 
 
