@@ -325,7 +325,10 @@ public class BasicCustomVideoRenderer extends BaseVideoRenderer{
             this.mCurrentFrame = frame;
             mFrameLock.unlock();
             
-            // @TODO: 5/12/17  duy
+
+            
+            // TODO: IMPLEMENT YOUR OWN ALGORITHM HERE TO ANALYZE FRAME BY FRAME
+            // AND TELL THE ROBOT TO PERFORM ANY ACTION 
 
 
 
@@ -346,14 +349,16 @@ public class BasicCustomVideoRenderer extends BaseVideoRenderer{
                 bb.get(yuv);
                 int[] intArray = new int[width*height];
 
-                // Decode Yuv data to integer array
                 decodeYUV420(intArray, yuv, width, height);
 
-                //mCustomVideoRenderer.mclone.stop();
-                // Initialize the bitmap, with the replaced color
                 Bitmap bmp = Bitmap.createBitmap(intArray, width, height, Bitmap.Config.ARGB_8888);
 
-                // @TODO
+
+
+                // TODO: IMPLEMENT YOUR OWN ALGORITHM HERE TO ANALYZE THE CURRENT SCREENSHOT
+                // AND TELL THE ROBOT TO PERFORM ANY ACTION
+
+
 
                 try {
                     String path = Environment.getExternalStorageDirectory().toString();
