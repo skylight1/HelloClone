@@ -2,6 +2,7 @@ package autonomous.clone.mobile_remote;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -34,10 +35,20 @@ import com.opentok.android.Session;
 import com.opentok.android.Stream;
 import com.opentok.android.Subscriber;
 import com.opentok.android.SubscriberKit;
+import com.pubnub.api.PNConfiguration;
+import com.pubnub.api.PubNub;
+import com.pubnub.api.callbacks.PNCallback;
+import com.pubnub.api.callbacks.SubscribeCallback;
+import com.pubnub.api.enums.PNStatusCategory;
+import com.pubnub.api.models.consumer.PNPublishResult;
+import com.pubnub.api.models.consumer.PNStatus;
+import com.pubnub.api.models.consumer.pubsub.PNMessageResult;
+import com.pubnub.api.models.consumer.pubsub.PNPresenceEventResult;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
 import java.util.List;
 
 import autonomous.sdk.Clone;
@@ -47,6 +58,8 @@ import pub.devrel.easypermissions.AfterPermissionGranted;
 import pub.devrel.easypermissions.AppSettingsDialog;
 import pub.devrel.easypermissions.EasyPermissions;
 import autonomous.sdk.Config;
+
+import static java.util.Arrays.asList;
 
 public class MainActivity extends AppCompatActivity
         implements EasyPermissions.PermissionCallbacks,
@@ -173,16 +186,74 @@ public class MainActivity extends AppCompatActivity
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                launchAffectiva();
+                clone.stop();
                 if (mSubscriber == null) {
                     return;
                 }
                 ((BasicCustomVideoRenderer) mSubscriber.getRenderer()).saveScreenshot(true);
                 Toast.makeText(MainActivity.this, "Screenshot saved.", Toast.LENGTH_LONG).show();
+
             }
         });
 
+        PNConfiguration pnConfiguration = new PNConfiguration();
+        pnConfiguration.setSubscribeKey(Config.PUBNUB_SUB);
+        pnConfiguration.setPublishKey(Config.PUBNUB_PUB);
+        pnConfiguration.setSecure(false);
 
+        PubNub pubnub = new PubNub(pnConfiguration);
 
+        pubnub.addListener(new SubscribeCallback() {
+
+            @Override
+            public void status(PubNub pubnub, PNStatus status) {
+                Log.i("MORRISON2", status.toString());
+            }
+
+            @Override
+            public void message(PubNub pubnub, PNMessageResult message) {
+                // Handle new message stored in message.message
+                if (message.getChannel() != null) {
+                    // Message has been received on channel group stored in
+                    // message.getChannel()
+                }
+                else {
+                    // Message has been received on channel stored in
+                    // message.getSubscription()
+                }
+
+                Log.i("MORRISON1", message.toString());
+                double distance = message.getMessage().getAsDouble();
+                if(distance > 2.5d) {
+                    clone.move(Config.FORWARD);
+                } else if(distance < 0.5d) {
+                    clone.stop();
+//                    launchAffectiva();
+                }
+
+            /*
+                log the following items with your favorite logger
+                    - message.getMessage()
+                    - message.getSubscription()
+                    - message.getTimetoken()
+            */
+            }
+
+            @Override
+            public void presence(PubNub pubnub, PNPresenceEventResult presence) {
+                Log.i("MORRISON3", presence.toString());
+            }
+        });
+
+        pubnub.subscribe().channels(asList("distance")).execute();
+
+    }
+
+    private void launchAffectiva() {
+        Intent intent = new Intent();
+        intent.setClassName("com.affectiva.framedetectordemo", "com.affectiva.framedetectordemo.MainActivity");
+        startActivity(intent);
     }
 
     private void startSessionVideo(){
@@ -325,7 +396,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onStop() {
         Log.d(TAG, "onPause");
-
+        clone.stop();
         super.onStop();
     }
 

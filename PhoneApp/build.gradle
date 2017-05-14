@@ -35,6 +35,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.4'
     compile 'com.mcxiaoke.volley:library-aar:1.0.1'
     compile 'pub.devrel:easypermissions:0.2.0'
+    compile group: 'com.pubnub', name: 'pubnub-gson', version: '4.6.2'
     testCompile 'junit:junit:4.12'
 }
 
