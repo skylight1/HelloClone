@@ -1,3 +1,9 @@
+# TechCrunch Disrupt Hackathon NYC 2017 - SoLoMoRo
+
+## Uses the PhoneApp demo app to control Clone Robot with data via PubNub from Vive tracking system and fire intent to Affectiva app when in proximity to client.
+
+ 
+
 # Clone SDK & Sample Code
 
 ## What is Clone?
