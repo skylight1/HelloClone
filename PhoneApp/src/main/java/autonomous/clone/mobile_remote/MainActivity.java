@@ -96,6 +96,8 @@ public class MainActivity extends AppCompatActivity
     private Clone clone;
     private VideoSession videoSession;
 
+    private boolean enroute = false;
+
     private final CompoundButton.OnCheckedChangeListener onChangeDirection = new CompoundButton.OnCheckedChangeListener() {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -139,6 +141,8 @@ public class MainActivity extends AppCompatActivity
             }
         }
     };
+
+    private boolean launchedAffectiva = false;
 
 
     @Override
@@ -227,9 +231,12 @@ public class MainActivity extends AppCompatActivity
                 double distance = message.getMessage().getAsDouble();
                 if(distance > 2.5d) {
                     clone.move(Config.FORWARD);
-                } else if(distance < 0.5d) {
+                    enroute = true;
+                } else if(distance < 0.75d) {
                     clone.stop();
-//                    launchAffectiva();
+                    if (enroute) {
+                        launchAffectiva();
+                    }
                 }
 
             /*
@@ -251,9 +258,13 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void launchAffectiva() {
+        if (launchedAffectiva) {
+            return;
+        }
         Intent intent = new Intent();
         intent.setClassName("com.affectiva.framedetectordemo", "com.affectiva.framedetectordemo.MainActivity");
         startActivity(intent);
+        launchedAffectiva = true;
     }
 
     private void startSessionVideo(){
